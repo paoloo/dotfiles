@@ -1,0 +1,14 @@
+termcapinfo xterm* ti@:te@		# C-a :source .screenrc
+startup_message off			# Turn off screen startup mesg
+defutf8 on				# Set encoding utf8 huehuebrbr
+vbell off				# Turn off the sound
+autodetach on
+bindkey ^N screen			# Create new screen - crtl+a c
+bindkey ^[x split			# split window, Alt+x
+bindkey ^R remove			# Remove the split window
+bindkey ^O only				# Remove all splits, single windows mode
+bindkey ^K kill				# Kill the window
+altscreen on				# Refresh display when exit program
+shelltitle "$ |bash"			# Dynamic title
+defscrollback 30000
+caption always '%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%=%{w}%{r} @%H %{w}'
