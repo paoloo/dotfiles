@@ -9,3 +9,10 @@
         diff = auto
         interactive = auto
         status = auto
+
+[user]
+       	email = paolocmo@gmail.com
+       	name = Paolo Oliveira
+
+[push]
+       	default = simple
