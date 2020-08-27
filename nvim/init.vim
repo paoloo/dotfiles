@@ -32,13 +32,9 @@ set t_ut=
 set t_vb=""
 set visualbell
 set cursorline
-set colorcolumn=80
 set clipboard=unnamed
 set number
 set hidden
-set list
-set listchars=trail:·,tab:┊\ ,eol:¬
-set lcs+=space:·
 let $nvim_tui_enable_true_color=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -95,7 +91,7 @@ set wildignore+=*.pyc
 " ======== Scrolling
 set lazyredraw
 set ttyfast
-set scrolloff=27
+set scrolloff=0
 set sidescrolloff=27
 set sidescroll=1
 
@@ -105,22 +101,6 @@ autocmd VimEnter * wincmd p
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowHidden = 1
 let NERDTreeMapOpenVSplit='v'
-
- " ======== FZF mapping
-let g:fzf_layout = { 'window': 'enew' }
-nnoremap <silent> <C-P> :FZF<cr>
-nnoremap <silent> <leader>a :Ag<cr>
-augroup localfzf
-  autocmd!
-  autocmd FileType fzf :tnoremap <buffer> <C-J> <C-J>
-  autocmd FileType fzf :tnoremap <buffer> <C-K> <C-K>
-  autocmd VimEnter * command! -bang -nargs=* Ag
-        \ call fzf#vim#ag(<q-args>,
-        \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-        \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-        \                 <bang>0)
-augroup END
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " ======== Bash configs
 autocmd FileType sh setlocal
