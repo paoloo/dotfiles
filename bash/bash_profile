@@ -1,0 +1,11 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+for file in $HOME/.dotfiles/bash/*.d;
+do
+	source $file
+done
+
+#Prompt
+PS1="\[$(tput setaf 6)\]\u@\h\[$(tput setaf 2)\] \w \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
+
+export PATH="$HOME/.cargo/bin:/usr/local/opt/helm@2/bin:$PATH"
