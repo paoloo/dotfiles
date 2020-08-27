@@ -36,6 +36,7 @@ brew "gdal", link: false
 brew "gdrive"
 brew "geckodriver"
 brew "git"
+brew "git-lfs"
 brew "gitter-cli"
 brew "gnuplot"
 brew "gnuradio"
