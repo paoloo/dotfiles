@@ -32,11 +32,11 @@ nmap <silent> <leader>m :NERDTreeToggle<cr>%
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+" to use ^<- and ^-> remember to disable the `mission control` shortcut using them
+nnoremap <silent> <C-Left> <C-w>h
+nnoremap <silent> <C-Right> <C-w>l
+noremap <silent> <C-Up> <C-w>k
+noremap <silent> <C-Down> <C-w>j
 
 " Create window splits
 nnoremap <silent> vv <C-w>v
