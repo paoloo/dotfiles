@@ -13,6 +13,9 @@ sudo scutil --set HostName $HOSTNAME
 sudo scutil --set LocalHostName $HOSTNAME
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $HOSTNAME
 
+# disable OSX's XProtect request
+echo "127.0.0.1 oscp.apple.com" | sudo tee -a /etc/hosts
+
 # Disable special character pop-up
 defaults write -g ApplePressAndHoldEnabled -bool false
 
