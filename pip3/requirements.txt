@@ -9,7 +9,7 @@ bitarray==1.4.2
 boto3==1.10.0
 botocore==1.17.49
 bs4==0.0.1
-certifi==2019.9.11
+certifi==2022.12.7
 chardet==3.0.4
 contextlib2==0.6.0.post1
 dna-features-viewer==3.0.1
